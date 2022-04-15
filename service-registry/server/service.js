@@ -1,7 +1,10 @@
 import express from 'express';
 import ServiceRegistry from './lib/ServiceRegistry.js';
+import cors from 'cors';
 
 const service = express();
+
+service.use(cors());
 
 export default (config) => {
     const log = config.log();

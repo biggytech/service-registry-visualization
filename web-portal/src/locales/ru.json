@@ -1,0 +1,26 @@
+{
+  "app": {
+    "title": "Service Registry Визуализация"
+  },
+  "registerServiceForm": {
+    "title": "Зарегистрировать сервис",
+    "serviceName": {
+      "label": "Имя Сервиса"
+    },
+    "serviceVersion": {
+      "label": "Версия Сервиса"
+    },
+    "servicePort": {
+      "label": "Порт Сервиса"
+    },
+    "submitText": "Зарегистрировать"
+  },
+  "form": {
+    "validation": {
+      "required": "Значение обязательно",
+      "minLength": "Длина значения должна быть равна или больше чем {{value}}",
+      "maxLength": "Длина значения должна быть равна или меньше чем {{value}}",
+      "onlyNumeric": "Значение может содержать только числа и точки"
+    }
+  }
+}

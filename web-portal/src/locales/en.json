@@ -1,0 +1,26 @@
+{
+  "app": {
+    "title": "Service Registry Visualization"
+  },
+  "registerServiceForm": {
+    "title": "Register Service",
+    "serviceName": {
+      "label": "Service Name"
+    },
+    "serviceVersion": {
+      "label": "Service Version"
+    },
+    "servicePort": {
+      "label": "Service Port"
+    },
+    "submitText": "Register"
+  },
+  "form": {
+    "validation": {
+      "required": "Input required",
+      "minLength": "Input length should equal or greater than {{value}}",
+      "maxLength": "Input length should equal or less than {{value}}",
+      "onlyNumeric": "Input should contain only numbers and dots"
+    }
+  }
+}
