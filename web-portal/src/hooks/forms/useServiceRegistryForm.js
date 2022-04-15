@@ -7,14 +7,19 @@ const useServiceRegistryForm = ({ onSubmit }) => {
 
   const serviceRegistrySchema = Yup.object().shape({
     serviceName: Yup.string()
-      .min(2, translate('form.validation.minLength', { value: 2 }))
+      .min(1, translate('form.validation.minLength', { value: 1 }))
       .max(50, translate('form.validation.maxLength', { value: 50 }))
       .required(translate('form.validation.required')),
     serviceVersion: Yup.string()
-      .min(2, translate('form.validation.minLength', { value: 2 }))
+      .min(1, translate('form.validation.minLength', { value: 1 }))
       .max(50, translate('form.validation.maxLength', { value: 50 }))
       .required(translate('form.validation.required'))
-      .matches(/^[0-9]*\.?[0-9]*$/, translate('form.validation.onlyNumeric')),
+      .matches(/^[.0-9]*$/, translate('form.validation.onlyNumeric')),
+    serviceIp: Yup.string()
+      .min(7, translate('form.validation.minLength', { value: 7 }))
+      .max(50, translate('form.validation.maxLength', { value: 50 }))
+      .required(translate('form.validation.required'))
+      .matches(/^[.0-9]*$/, translate('form.validation.onlyNumeric')),
     servicePort: Yup.number().min(0).max(9999).required(translate('form.validation.required')),
   });
 
@@ -22,6 +27,7 @@ const useServiceRegistryForm = ({ onSubmit }) => {
     initialValues: {
       serviceName: '',
       serviceVersion: '',
+      serviceIp: '',
       servicePort: '',
     },
     onSubmit,

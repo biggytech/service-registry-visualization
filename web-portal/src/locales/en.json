@@ -10,6 +10,9 @@
     "serviceVersion": {
       "label": "Service Version"
     },
+    "serviceIp": {
+      "label": "Service IP"
+    },
     "servicePort": {
       "label": "Service Port"
     },

@@ -8,7 +8,7 @@ import { useTranslation } from '../utils/translate';
 
 const ServiceRegistry = ({ registerService }) => {
   const handleSubmit = useCallback((values) => {
-    registerService(values.serviceName, values.serviceVersion, values.servicePort);
+    registerService(values.serviceName, values.serviceVersion, values.servicePort, values.serviceIp);
   }, [registerService]);
   const form = useServiceRegistryForm({ onSubmit: handleSubmit });
   const { translate } = useTranslation();
@@ -43,6 +43,15 @@ const ServiceRegistry = ({ registerService }) => {
         onChange={form.change}
         error={!!form.errors.serviceVersion}
         helperText={form.errors.serviceVersion}
+      />
+      <TextField
+        required
+        name="serviceIp"
+        label={translate('registerServiceForm.serviceIp.label')}
+        value={form.values.serviceIp}
+        onChange={form.change}
+        error={!!form.errors.serviceIp}
+        helperText={form.errors.serviceIp}
       />
       <TextField
         required

@@ -10,6 +10,9 @@
     "serviceVersion": {
       "label": "Версия Сервиса"
     },
+    "serviceIp": {
+      "label": "IP Сервиса"
+    },
     "servicePort": {
       "label": "Порт Сервиса"
     },

@@ -1,1 +1,26 @@
-PUT http://localhost:3000/register/dummy-name/1.0/3001
+###
+# Register Service
+# /register/:serviceName/:serviceVersion/:servicePort/:serviceIp?
+PUT http://localhost:3000/register/dummy-name/1.2.3/3001
+###
+PUT http://localhost:3000/register/dummy-name/1.2.4/3001/1.1.2.3
+
+###
+# Register Service (with IP)
+# /register/:serviceName/:serviceVersion/:servicePort/:serviceIp?
+PUT http://localhost:3000/register/dummy-name/1.2.3/3001/1.1.1.1
+
+###
+# Unregister Service
+# /unregister/:serviceName/:serviceVersion/:servicePort/:serviceIp?
+DELETE http://localhost:3000/unregister/dummy-name/1.2.3/3001
+
+###
+# Unregister Service (with IP)
+# /unregister/:serviceName/:serviceVersion/:servicePort/:serviceIp?
+DELETE http://localhost:3000/unregister/dummy-name/1.2.3/3001/1.1.1.1
+
+###
+# Find Service
+# /find/:serviceName/:serviceVersion
+GET http://localhost:3000/find/dummy-name/1.2
