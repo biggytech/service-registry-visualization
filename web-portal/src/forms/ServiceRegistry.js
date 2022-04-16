@@ -5,10 +5,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import useServiceRegistryForm from '../hooks/forms/useServiceRegistryForm';
 import { useTranslation } from '../utils/translate';
+import HelpText from '../components/HelpText';
 
-const ServiceRegistry = ({ registerService }) => {
+const ServiceRegistry = ({ registerService, showHelp }) => {
   const handleSubmit = useCallback((values) => {
-    registerService(values.serviceName, values.serviceVersion, values.servicePort, values.serviceIp);
+    return registerService(values.serviceName, values.serviceVersion, values.servicePort, values.serviceIp);
   }, [registerService]);
   const form = useServiceRegistryForm({ onSubmit: handleSubmit });
   const { translate } = useTranslation();
@@ -17,6 +18,7 @@ const ServiceRegistry = ({ registerService }) => {
     component="form"
     sx={{
       '& .MuiTextField-root': { m: 1, width: '25ch' },
+      mb: 2
     }}
     noValidate
     autoComplete="off"
@@ -64,7 +66,8 @@ const ServiceRegistry = ({ registerService }) => {
         helperText={form.errors.servicePort}
       />
     </div>
-    <Button variant="contained" type="submit">{translate('registerServiceForm.submitText')}</Button>
+    {showHelp ? <HelpText text={translate('registerServiceForm.help')} /> : null}
+    <Button variant="contained" type="submit" disabled={!!Object.keys(form.errors).length}>{translate('registerServiceForm.submitText')}</Button>
   </Box>
 };
 

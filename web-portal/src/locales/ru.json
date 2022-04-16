@@ -4,6 +4,7 @@
   },
   "registerServiceForm": {
     "title": "Зарегистрировать сервис",
+    "help": "Например: Мой сервис - 1.2.0 - 127.0.0.1 - 3000",
     "serviceName": {
       "label": "Имя Сервиса"
     },
@@ -17,6 +18,17 @@
       "label": "Порт Сервиса"
     },
     "submitText": "Зарегистрировать"
+  },
+  "servicesList": {
+    "title": "Список сервисов",
+    "help": "Сервисы удаляются если не используются",
+    "cells": {
+      "serviceName": "Имя Сервиса",
+      "serviceVersion": "Версия Сервиса",
+      "serviceIp": "IP Сервиса",
+      "servicePort": "Порт Сервиса",
+      "timestamp": "Дата обновления"
+    }
   },
   "form": {
     "validation": {

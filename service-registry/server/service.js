@@ -38,6 +38,12 @@ export default (config) => {
     });
   });
 
+  service.get('/find/all', (req, res) => {
+    const services = serviceRegistry.getAll();
+
+    return res.json(services);
+  });
+
   service.get('/find/:serviceName/:serviceVersion', (req, res) => {
     const { serviceName, serviceVersion } = req.params;
 

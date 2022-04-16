@@ -30,7 +30,9 @@ const useServiceRegistryForm = ({ onSubmit }) => {
       serviceIp: '',
       servicePort: '',
     },
-    onSubmit,
+    onSubmit: (values, { resetForm }) => {
+      onSubmit(values).then(resetForm);
+    },
     validationSchema: serviceRegistrySchema
   });
 

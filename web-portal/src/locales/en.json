@@ -4,6 +4,7 @@
   },
   "registerServiceForm": {
     "title": "Register Service",
+    "help": "For example: My Service - 1.2.0 - 127.0.0.1 - 3000",
     "serviceName": {
       "label": "Service Name"
     },
@@ -17,6 +18,17 @@
       "label": "Service Port"
     },
     "submitText": "Register"
+  },
+  "servicesList": {
+    "title": "Services List",
+    "help": "Services are removed after some time of inactivity",
+    "cells": {
+      "serviceName": "Service Name",
+      "serviceVersion": "Service Version",
+      "serviceIp": "Service IP",
+      "servicePort": "Service Port",
+      "timestamp": "Updated Time"
+    }
   },
   "form": {
     "validation": {
