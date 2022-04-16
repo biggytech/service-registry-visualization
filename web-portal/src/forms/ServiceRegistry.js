@@ -21,7 +21,7 @@ const ServiceRegistry = ({ registerService, showHelp }) => {
       mb: 2
     }}
     noValidate
-    autoComplete="off"
+    autoComplete="on"
     onSubmit={form.submit}
   >
     <Typography variant="h2" gutterBottom component="div">

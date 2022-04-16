@@ -11,3 +11,7 @@ export const getAllServices = () => {
 export const unregisterService = (serviceName, serviceVersion, servicePort, serviceIp) => {
   return fetch(host + `unregister/${serviceName}/${serviceVersion}/${servicePort}/${serviceIp}`, { method: 'DELETE' });
 };
+
+export const getService = (serviceName, serviceVersion) => {
+  return fetch(host + `find/${serviceName}/${serviceVersion}`);
+};

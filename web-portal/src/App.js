@@ -5,9 +5,10 @@ import Header from './components/Header';
 import { useTranslation } from './utils/translate';
 import ServicesList from './lists/ServicesList';
 import Divider from '@mui/material/Divider';
+import GetService from './forms/GetService';
 
 function App() {
-  const { registerService, services, unregisterService } = useServiceRegistry();
+  const { registerService, services, unregisterService, getService } = useServiceRegistry();
   const { translate } = useTranslation();
 
   return (
@@ -17,6 +18,8 @@ function App() {
       <ServiceRegistry registerService={registerService} showHelp={!services.length} />
       <Divider />
       <ServicesList services={services} unregisterService={unregisterService} />
+      <Divider />
+      <GetService getService={getService} />
     </div>
   );
 }

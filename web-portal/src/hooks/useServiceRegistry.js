@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { registerService as registerServiceApi, getAllServices, unregisterService as unregisterServiceApi } from '../api/service-registry'
+import { registerService as registerServiceApi, getAllServices, unregisterService as unregisterServiceApi, getService as getServiceApi } from '../api/service-registry'
 
 const useServiceRegistry = () => {
   const [services, setServices] = useState([]);
@@ -16,7 +16,11 @@ const useServiceRegistry = () => {
     return unregisterServiceApi(...args).then(getAllServices).then(res => res.json()).then(setServices);
   }, []);
 
-  return { registerService, services, unregisterService }
+  const getService = useCallback((...args) => {
+    return getServiceApi(...args).then(res => res.status === 200 ? res.json() : null);
+  }, []);
+
+  return { registerService, services, unregisterService, getService }
 };
 
 export default useServiceRegistry;

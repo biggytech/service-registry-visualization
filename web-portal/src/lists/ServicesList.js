@@ -19,6 +19,7 @@ const ServicesList = ({ services, unregisterService }) => {
     component="div"
     sx={{
       '& .MuiTextField-root': { m: 1, width: '25ch' },
+      mb: 2
     }}
   >
     <Typography variant="h2" gutterBottom component="div">

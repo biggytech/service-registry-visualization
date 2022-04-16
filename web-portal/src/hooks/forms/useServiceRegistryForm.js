@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useTranslation } from '../../utils/translate'
+import { useTranslation } from '../../utils/translate';
+import UseFormInterface from './lib/UseFormInterface';
 
 const useServiceRegistryForm = ({ onSubmit }) => {
   const { translate } = useTranslation();
@@ -36,12 +37,7 @@ const useServiceRegistryForm = ({ onSubmit }) => {
     validationSchema: serviceRegistrySchema
   });
 
-  return {
-    values: formik.values,
-    errors: formik.errors,
-    change: formik.handleChange,
-    submit: formik.handleSubmit,
-  }
+  return new UseFormInterface(formik).result;
 };
 
 export default useServiceRegistryForm;

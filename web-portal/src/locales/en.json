@@ -30,6 +30,25 @@
       "timestamp": "Updated Time"
     }
   },
+  "getServiceForm": {
+    "title": "Get Service",
+    "help": "You can enter any major version to get a service. For example: you can use 1 or 1.2 to get service of version 1.2.3",
+    "serviceName": {
+      "label": "Service Name"
+    },
+    "serviceVersion": {
+      "label": "Service Version"
+    },
+    "submitText": "Get",
+    "cells": {
+      "serviceName": "Service Name",
+      "serviceVersion": "Service Version",
+      "serviceIp": "Service IP",
+      "servicePort": "Service Port",
+      "timestamp": "Updated Time"
+    },
+    "notFound": "Service not found"
+  },
   "form": {
     "validation": {
       "required": "Input required",
