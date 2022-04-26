@@ -1,0 +1,17 @@
+{
+  "name": "demo-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules bin/run | bunyan"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bunyan": "^1.8.15",
+    "express": "^4.17.3"
+  }
+}

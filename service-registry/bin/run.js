@@ -14,5 +14,5 @@ const server = http.createServer(service);
 server.listen(process.env.PORT || 3000);
 
 server.on('listening', () => {
-    log.info(`service-registry is listening on port: ${server.address().port} in ${service.get('env')} mode`);
+  log.info(`service-registry is listening on port: ${server.address().port} in ${service.get('env')} mode`);
 });

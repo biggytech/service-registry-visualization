@@ -50,6 +50,7 @@ class ServiceRegistry {
   unregister(name, version, ip, port) {
     const key = this.constructor.key(name, version, ip, port);
     delete this.services[key];
+    this.log.debug(`Unregistered a service with name ${name}, version ${version} at ${ip}:${port}`);
     return key;
   }
 
