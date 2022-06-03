@@ -1,10 +1,11 @@
 import http from 'http';
 import axios from 'axios';
-
 import configs from '../config/index.js';
-
 import getService from '../server/service.js';
+import dotenv from 'dotenv';
 
+
+dotenv.config();
 const config = configs[process.env.NODE_ENV || 'development'];
 
 const log = config.log();

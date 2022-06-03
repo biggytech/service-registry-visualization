@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import ServiceRegistry from './forms/ServiceRegistry'
 import useServiceRegistry from './hooks/useServiceRegistry'
